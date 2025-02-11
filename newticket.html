@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>New Ticket</title>
+  </head>
+  <body>
+    <div class="ticket-container">
+      <h1>Congrats, <span id="full-name"></span>!</h1>
+
+      <p>
+        Your ticket is ready. We've emailed your ticket to
+        <span id="email-address"></span> and will send updates in the run up to
+        the event.
+      </p>
+      <!-- <span id="github-username"></span> -->
+      <p>Coding Conf Jan 31, 2025 / Austin, TX</p>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Yasin Gunaydin</a>.
+    </div>
+
+    <img
+      src="./assets/images/pattern-squiggly-line-bottom-desktop.svg"
+      class="bottom-left-svg"
+      alt="Pattern Squiggly Line"
+    />
+  </body>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const formData = JSON.parse(localStorage.getItem('form'));
+      if (formData) {
+        document.getElementById('full-name').textContent =
+          formData['full-name'];
+        document.getElementById('email-address').textContent =
+          formData['email'];
+        document.getElementById('github-username').textContent =
+          formData['github-username'];
+      }
+    });
+  </script>
+</html>

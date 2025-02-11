@@ -1,0 +1,86 @@
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(229, 11%, 29%);
+}
+
+body {
+  background-image: url('./assets/images/background-desktop.png');
+  color: white;
+  font-family: 'Inconsolata', monospace;
+  font-weight: 400;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  text-align: center;
+}
+
+.upload-container {
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 20px;
+  height: 100px;
+}
+
+.upload-container:hover {
+  border-color: #888;
+}
+
+.upload-label {
+  display: block;
+  color: #333;
+  font-size: 16px;
+}
+
+#file-upload {
+  display: none;
+}
+
+input {
+  width: 300px; /* Increase the width */
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.generatebutton {
+  background-color: hsl(229, 31%, 21%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  text-align: center; /* Center align the h1 elements */
+  margin-bottom: 10px; /* Add some space below the h1 elements */
+}
+
+label {
+  display: block; /* Ensure labels are block elements */
+  text-align: left; /* Align labels to the left */
+  margin-bottom: 5px; /* Add some space below the labels */
+}
+
+.bottom-left-svg {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 800px; /* Adjust the width as needed */
+  height: auto;
+  z-index: -1; /* Ensure it stays behind other content */
+}

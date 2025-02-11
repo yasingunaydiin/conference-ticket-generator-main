@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Conference ticket generator</title>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Form starts -->
+
+    <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
+    <p>Secure your spot at next year's biggest coding conference.</p>
+
+    <form id="ticket-form">
+      <h1>Upload Avatar</h1>
+      <div>
+        <div class="upload-container">
+          <input type="file" id="file-upload" accept="image/*" />
+          <label for="file-upload" class="upload-label">
+            <span>Drag and drop or click to upload</span>
+          </label>
+        </div>
+        <span>Upload your photo (JPG or PNG, max size: 500KB).</span>
+      </div>
+
+      <div>
+        <label for="first-name">Full Name</label>
+        <input type="text" name="full-name" required />
+        <label for="email-address">Email Address</label>
+        <input
+          type="email"
+          name="email"
+          placeholder="example@email.com"
+          required
+        />
+        <label for="github-username">GitHub Username</label>
+        <input
+          type="text"
+          name="github-username"
+          placeholder="@yourusername"
+          required
+        />
+      </div>
+
+      <button type="submit" class="generatebutton">Generate My Ticket</button>
+    </form>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+
+    <!-- Add the SVG image here -->
+    <img
+      src="./assets/images/pattern-squiggly-line-bottom-desktop.svg"
+      class="bottom-left-svg"
+      alt="Pattern Squiggly Line"
+    />
+  </body>
+
+  <script>
+    const form = document.querySelector('form');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const formData = new FormData(form);
+      const object = Object.fromEntries(formData);
+      const json = JSON.stringify(object);
+
+      localStorage.setItem('form', json);
+
+      window.location.href = 'newticket.html';
+    });
+  </script>
+</html>
